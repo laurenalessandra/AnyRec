@@ -1,0 +1,6 @@
+framework module Pods_AnyRec {
+  umbrella header "Pods-AnyRec-umbrella.h"
+
+  export *
+  module * { export * }
+}

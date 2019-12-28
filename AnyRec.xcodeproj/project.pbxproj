@@ -13,6 +13,7 @@
 		4DB37ADD23B738720069D9A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DB37ADB23B738720069D9A4 /* Main.storyboard */; };
 		4DB37ADF23B738730069D9A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DB37ADE23B738730069D9A4 /* Assets.xcassets */; };
 		4DB37AE223B738730069D9A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DB37AE023B738730069D9A4 /* LaunchScreen.storyboard */; };
+		E53256EE7ECEE476032E0825 /* Pods_AnyRec.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60277F781331BA9E8F627F57 /* Pods_AnyRec.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,9 @@
 		4DB37ADE23B738730069D9A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4DB37AE123B738730069D9A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4DB37AE323B738730069D9A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		60277F781331BA9E8F627F57 /* Pods_AnyRec.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnyRec.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		887C33855907B268EDABFA97 /* Pods-AnyRec.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnyRec.debug.xcconfig"; path = "Target Support Files/Pods-AnyRec/Pods-AnyRec.debug.xcconfig"; sourceTree = "<group>"; };
+		CF1E003F4EE4D381EE7788EC /* Pods-AnyRec.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnyRec.release.xcconfig"; path = "Target Support Files/Pods-AnyRec/Pods-AnyRec.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E53256EE7ECEE476032E0825 /* Pods_AnyRec.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,8 @@
 			children = (
 				4DB37AD423B738720069D9A4 /* AnyRec */,
 				4DB37AD323B738720069D9A4 /* Products */,
+				9158F905F593CFB427977C35 /* Pods */,
+				818C2447BC6F200A5AFDB693 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +74,24 @@
 			path = AnyRec;
 			sourceTree = "<group>";
 		};
+		818C2447BC6F200A5AFDB693 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				60277F781331BA9E8F627F57 /* Pods_AnyRec.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9158F905F593CFB427977C35 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				887C33855907B268EDABFA97 /* Pods-AnyRec.debug.xcconfig */,
+				CF1E003F4EE4D381EE7788EC /* Pods-AnyRec.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +99,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4DB37AE623B738730069D9A4 /* Build configuration list for PBXNativeTarget "AnyRec" */;
 			buildPhases = (
+				19E78D33C4B2048D244D52F0 /* [CP] Check Pods Manifest.lock */,
 				4DB37ACE23B738720069D9A4 /* Sources */,
 				4DB37ACF23B738720069D9A4 /* Frameworks */,
 				4DB37AD023B738720069D9A4 /* Resources */,
+				9E6E4282D56D65C0E4FE4A36 /* [CP] Embed Pods Frameworks */,
+				E0BDB778489E3693B99DE631 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -132,6 +160,65 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		19E78D33C4B2048D244D52F0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AnyRec-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9E6E4282D56D65C0E4FE4A36 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AnyRec/Pods-AnyRec-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AnyRec/Pods-AnyRec-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AnyRec/Pods-AnyRec-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E0BDB778489E3693B99DE631 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AnyRec/Pods-AnyRec-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AnyRec/Pods-AnyRec-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AnyRec/Pods-AnyRec-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4DB37ACE23B738720069D9A4 /* Sources */ = {
@@ -282,6 +369,7 @@
 		};
 		4DB37AE723B738730069D9A4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 887C33855907B268EDABFA97 /* Pods-AnyRec.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +388,7 @@
 		};
 		4DB37AE823B738730069D9A4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CF1E003F4EE4D381EE7788EC /* Pods-AnyRec.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
