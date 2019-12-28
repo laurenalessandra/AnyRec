@@ -22,6 +22,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        reloadData()
         greetingLabel.text = GreetingSimulator.determineGreeting()
         
         authUI = FUIAuth.defaultAuthUI()
@@ -50,10 +51,6 @@ class ViewController: UIViewController {
         } catch {
             view.isHidden = true
         }
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        reloadData()
     }
     
     func reloadData() {
@@ -170,7 +167,9 @@ extension ViewController: GMSAutocompleteViewControllerDelegate {
         let dataUpdater = FirestoreDataUpdater(documentID: city.documentID)
         dataUpdater.saveData(data: city) {
             success in
-            success ? print("Save successful!") : print("Save unsuccessful.")
+            if success {
+                self.reloadData()
+            }
         }
     }
     
@@ -183,5 +182,3 @@ extension ViewController: GMSAutocompleteViewControllerDelegate {
     }
     
 }
-
-
