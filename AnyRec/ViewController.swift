@@ -92,6 +92,23 @@ class ViewController: UIViewController {
         present(autocompleteController, animated: true, completion: nil)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ShowCity" {
+            let destination = segue.destination as! CityViewController
+            destination.city = dataLoader.firestoreData[index] as? City
+        }
+    }
+    
+    @IBAction func unwindFromCityViewController(segue: UIStoryboardSegue) {
+        let source = segue.source as! CityViewController
+        let dataUpdater = FirestoreDataUpdater(documentID: source.city.documentID)
+        dataUpdater.deleteData() { success in
+            if success {
+                self.reloadData()
+                print("Delete successful!")
+            }
+        }
+    }
     
 }
 extension ViewController: FUIAuthDelegate {
