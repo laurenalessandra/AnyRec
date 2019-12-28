@@ -15,6 +15,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var greetingLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
     var authUI: FUIAuth!
+    var index: Int!
+    var dataLoader: FirestoreDataLoader!
+    var googlePhotoLoader = GooglePhotoLoader()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +27,12 @@ class ViewController: UIViewController {
         authUI?.delegate = self
         signIn()
         
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        collectionView.contentInset = UIEdgeInsets(top: 0, left: 30, bottom: 0, right: 30)
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationController?.navigationBar.shadowImage = UIImage()
+        navigationController?.navigationBar.isTranslucent = true
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -35,9 +44,24 @@ class ViewController: UIViewController {
         do {
             try authUI!.signOut()
             view.isHidden = true
+            dataLoader.firestoreData = []
             signIn()
         } catch {
             view.isHidden = true
+        }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        dataLoader = FirestoreDataLoader()
+        dataLoader.loadData(dataType: .cities) {
+            self.collectionView.reloadData()
+        }
+    }
+    
+    func reloadData() {
+        dataLoader = FirestoreDataLoader()
+        dataLoader.loadData(dataType: .cities) {
+            self.collectionView.reloadData()
         }
     }
     
@@ -82,6 +106,7 @@ extension ViewController: FUIAuthDelegate {
         if authDataResult?.user != nil {
             view.isHidden = false
             signOutButton.title = "Sign Out"
+            reloadData()
         } else {
             signInAnonymously()
         }
@@ -99,4 +124,36 @@ extension ViewController: FUIAuthDelegate {
     }
     
 }
+extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return dataLoader.firestoreData.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cityCell = collectionView.dequeueReusableCell(withReuseIdentifier: "CityCell", for: indexPath) as! CityCell
+        let city = dataLoader.firestoreData[indexPath.row] as! City
+        
+        cityCell.cityImage.image = UIImage(named: "empty-card")
+        if let imageFromCache = googlePhotoLoader.imageCache.object(forKey: city.placeID as AnyObject) as? UIImage {
+            cityCell.cityImage.image = imageFromCache
+        } else {
+            googlePhotoLoader.loadFirstPhotoForPlace(placeID: city.placeID, imageView: cityCell.cityImage)
+        }
+        
+        cityCell.updateName(city)
+        cityCell.layer.cornerRadius = 10
+        return cityCell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        index = indexPath.row
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
+        index = indexPath.row
+        return true
+    }
+}
+
 

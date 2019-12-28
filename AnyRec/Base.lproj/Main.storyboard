@@ -41,14 +41,17 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="FRR-Y7-VSa">
                                 <rect key="frame" x="0.0" y="214" width="414" height="385"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="B2F-IP-FPb">
-                                    <size key="itemSize" width="234" height="375.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="385" id="U9N-gW-hDW"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="15" minimumInteritemSpacing="0.0" id="B2F-IP-FPb">
+                                    <size key="itemSize" width="262" height="375.5"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CityCell" id="njw-Bd-N4H">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CityCell" id="njw-Bd-N4H" customClass="CityCell" customModule="AnyRec" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="5" width="234" height="375.5"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Vzl-E0-ChD">
@@ -61,6 +64,7 @@
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mBs-K5-HUV">
                                                     <rect key="frame" x="0.0" y="300.5" width="234" height="75"/>
                                                     <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                                     <state key="normal">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </state>
@@ -79,6 +83,8 @@
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="234" height="375.5"/>
                                         <connections>
+                                            <outlet property="cityImage" destination="vgL-vd-Wh5" id="9YN-7t-4ia"/>
+                                            <outlet property="cityName" destination="mBs-K5-HUV" id="Ouy-AP-Phh"/>
                                             <segue destination="ejk-8R-O5B" kind="show" id="Ix3-J4-JoI"/>
                                         </connections>
                                     </collectionViewCell>
@@ -87,7 +93,6 @@
                         </subviews>
                         <color key="backgroundColor" red="0.45484536920000002" green="0.1074393501" blue="0.057101002560000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="kKa-q5-pcM" firstAttribute="top" secondItem="FRR-Y7-VSa" secondAttribute="bottom" constant="200" id="3az-XF-mdb"/>
                             <constraint firstItem="nth-M0-ghp" firstAttribute="bottom" secondItem="kKa-q5-pcM" secondAttribute="bottom" constant="30" id="3bO-Tk-nol"/>
                             <constraint firstItem="nth-M0-ghp" firstAttribute="trailing" secondItem="4J5-Wd-dnb" secondAttribute="trailing" constant="30" id="8Mp-1j-8rg"/>
                             <constraint firstItem="G8U-ZA-gVq" firstAttribute="leading" secondItem="nth-M0-ghp" secondAttribute="leading" id="94f-6R-Lw0"/>
