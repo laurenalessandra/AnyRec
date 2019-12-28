@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,8 @@
 		4DB37ADD23B738720069D9A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DB37ADB23B738720069D9A4 /* Main.storyboard */; };
 		4DB37ADF23B738730069D9A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DB37ADE23B738730069D9A4 /* Assets.xcassets */; };
 		4DB37AE223B738730069D9A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DB37AE023B738730069D9A4 /* LaunchScreen.storyboard */; };
+		4DBBF68323B74A64009E0906 /* GreetingSimulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBBF68223B74A64009E0906 /* GreetingSimulator.swift */; };
+		4DBBF68523B74EB9009E0906 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4DBBF68423B74EB8009E0906 /* GoogleService-Info.plist */; };
 		E53256EE7ECEE476032E0825 /* Pods_AnyRec.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60277F781331BA9E8F627F57 /* Pods_AnyRec.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +27,8 @@
 		4DB37ADE23B738730069D9A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4DB37AE123B738730069D9A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4DB37AE323B738730069D9A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4DBBF68223B74A64009E0906 /* GreetingSimulator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingSimulator.swift; sourceTree = "<group>"; };
+		4DBBF68423B74EB8009E0906 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		60277F781331BA9E8F627F57 /* Pods_AnyRec.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnyRec.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		887C33855907B268EDABFA97 /* Pods-AnyRec.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnyRec.debug.xcconfig"; path = "Target Support Files/Pods-AnyRec/Pods-AnyRec.debug.xcconfig"; sourceTree = "<group>"; };
 		CF1E003F4EE4D381EE7788EC /* Pods-AnyRec.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnyRec.release.xcconfig"; path = "Target Support Files/Pods-AnyRec/Pods-AnyRec.release.xcconfig"; sourceTree = "<group>"; };
@@ -70,6 +74,8 @@
 				4DB37ADE23B738730069D9A4 /* Assets.xcassets */,
 				4DB37AE023B738730069D9A4 /* LaunchScreen.storyboard */,
 				4DB37AE323B738730069D9A4 /* Info.plist */,
+				4DBBF68223B74A64009E0906 /* GreetingSimulator.swift */,
+				4DBBF68423B74EB8009E0906 /* GoogleService-Info.plist */,
 			);
 			path = AnyRec;
 			sourceTree = "<group>";
@@ -88,7 +94,6 @@
 				887C33855907B268EDABFA97 /* Pods-AnyRec.debug.xcconfig */,
 				CF1E003F4EE4D381EE7788EC /* Pods-AnyRec.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -154,6 +159,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4DB37AE223B738730069D9A4 /* LaunchScreen.storyboard in Resources */,
+				4DBBF68523B74EB9009E0906 /* GoogleService-Info.plist in Resources */,
 				4DB37ADF23B738730069D9A4 /* Assets.xcassets in Resources */,
 				4DB37ADD23B738720069D9A4 /* Main.storyboard in Resources */,
 			);
@@ -228,6 +234,7 @@
 				4DB37ADA23B738720069D9A4 /* ViewController.swift in Sources */,
 				4DB37AD623B738720069D9A4 /* AppDelegate.swift in Sources */,
 				4DB37AD823B738720069D9A4 /* SceneDelegate.swift in Sources */,
+				4DBBF68323B74A64009E0906 /* GreetingSimulator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
