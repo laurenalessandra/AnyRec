@@ -8,6 +8,7 @@
 
 import UIKit
 import FirebaseUI
+import GooglePlaces
 
 class ViewController: UIViewController {
 
@@ -52,10 +53,7 @@ class ViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        dataLoader = FirestoreDataLoader()
-        dataLoader.loadData(dataType: .cities) {
-            self.collectionView.reloadData()
-        }
+        reloadData()
     }
     
     func reloadData() {
@@ -90,6 +88,13 @@ class ViewController: UIViewController {
             
         }
     }
+    
+    @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
+        let autocompleteController = GMSAutocompleteViewController()
+        autocompleteController.delegate = self
+        present(autocompleteController, animated: true, completion: nil)
+    }
+    
     
 }
 extension ViewController: FUIAuthDelegate {
@@ -154,6 +159,29 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate {
         index = indexPath.row
         return true
     }
+}
+
+extension ViewController: GMSAutocompleteViewControllerDelegate {
+    
+    func viewController(_ viewController: GMSAutocompleteViewController, didAutocompleteWith place: GMSPlace) {
+        dismiss(animated: true, completion: nil)
+        let city = City(name: place.name ?? "", latitude: place.coordinate.latitude, longitude: place.coordinate.longitude, placeID: place.placeID ?? "", postingUserID: "", documentID: "")
+        
+        let dataUpdater = FirestoreDataUpdater(documentID: city.documentID)
+        dataUpdater.saveData(data: city) {
+            success in
+            success ? print("Save successful!") : print("Save unsuccessful.")
+        }
+    }
+    
+    func viewController(_ viewController: GMSAutocompleteViewController, didFailAutocompleteWithError error: Error) {
+        print(error.localizedDescription)
+    }
+    
+    func wasCancelled(_ viewController: GMSAutocompleteViewController) {
+        dismiss(animated: true, completion: nil)
+    }
+    
 }
 
 

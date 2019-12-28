@@ -120,6 +120,9 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="done" systemItem="add" id="bQ4-nj-tI2">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="addButtonPressed:" destination="jAm-VE-cAB" id="bhy-Wv-pWK"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
