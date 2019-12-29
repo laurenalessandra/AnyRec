@@ -12,13 +12,7 @@ class AlertGenerator {
     
     static func displayAlert(title: String, message: String, button: String, nav: UINavigationController?) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
-        alert.addAction(UIAlertAction(title: button, style: UIAlertAction.Style.default, handler: { alert in
-            if let navigation = nav {
-                navigation.popViewController(animated: true)
-            } else {
-                nav?.dismiss(animated: true, completion: nil)
-            }
-        }))
+        alert.addAction(UIAlertAction(title: button, style: UIAlertAction.Style.default))
         nav?.present(alert, animated: true, completion: nil)
     }
 }

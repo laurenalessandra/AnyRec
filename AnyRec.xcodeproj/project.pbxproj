@@ -122,6 +122,7 @@
 				4DB37AD923B738720069D9A4 /* ViewController.swift */,
 				4DBBF6A023B7B80A009E0906 /* CityViewController.swift */,
 				4DBBF6A623B83F29009E0906 /* SightsViewController.swift */,
+				4DBBF6B623B85854009E0906 /* SightDetailViewController.swift */,
 				4DB37ADB23B738720069D9A4 /* Main.storyboard */,
 				4DB37ADE23B738730069D9A4 /* Assets.xcassets */,
 				4DB37AE023B738730069D9A4 /* LaunchScreen.storyboard */,
@@ -130,7 +131,6 @@
 				4DBBF68423B74EB8009E0906 /* GoogleService-Info.plist */,
 				4DBBF6B223B84B13009E0906 /* ActivityIndicator.swift */,
 				4DBBF6B423B84C95009E0906 /* AlertGenerator.swift */,
-				4DBBF6B623B85854009E0906 /* SightDetailViewController.swift */,
 			);
 			path = AnyRec;
 			sourceTree = "<group>";

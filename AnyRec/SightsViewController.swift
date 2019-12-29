@@ -70,6 +70,14 @@ class SightsViewController: UIViewController {
             }
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ShowSightDetail" {
+            let destination = segue.destination as! SightDetailViewController
+            destination.venue = recLoader.venues[index]
+            destination.city = city
+        }
+    }
 
 }
 extension SightsViewController: UICollectionViewDataSource, UICollectionViewDelegate {
