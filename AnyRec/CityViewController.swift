@@ -16,7 +16,7 @@ class CityViewController: UIViewController {
     var recIndex: Int!
     
     let others = ["Itinerary", "Itinerary Map", "Search"]
-    let othersSegues = ["ShowItinerary", "ShowMap", "SearchVenues"]
+    let othersSegues = ["ShowItinerary", "ShowMap", "ShowSearch"]
     let recommendations = ["Food", "Drinks", "Desserts", "Fun", "Shopping", "Sights"]
     
     override func viewDidLoad() {
@@ -40,6 +40,9 @@ class CityViewController: UIViewController {
             destination.city = city
         } else if segue.identifier == "ShowMap" {
             let destination = segue.destination as! ItineraryMapViewController
+            destination.city = city
+        } else if segue.identifier == "ShowSearch" {
+            let destination = segue.destination as! SearchViewController
             destination.city = city
         }
     }

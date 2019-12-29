@@ -12,7 +12,7 @@ class SightsViewController: UIViewController {
 
     var imageCache = NSCache<NSString, UIImage>()
     @IBOutlet weak var collectionView: UICollectionView!
-    var recLoader = FoursquareRecLoader()
+    var recLoader = FoursquareLoader()
     var intent: Int!
     var city: City!
     var offset = 0

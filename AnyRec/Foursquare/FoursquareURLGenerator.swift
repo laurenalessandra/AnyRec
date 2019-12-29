@@ -18,7 +18,7 @@ class FoursquareURLGenerator {
     }
     
     func getSearchURL(latitude: Double, longitude: Double, query: String) -> String {
-        return "https://api.foursquare.com/v2/venues/search?ll=\(latitude),\(longitude)&query=\(query)&limit=50&client_id=\(client_id)&client_secret=\(client_secret)"
+        return "https://api.foursquare.com/v2/venues/search?ll=\(latitude),\(longitude)&query=\(query)&limit=50&client_id=\(client_id)&client_secret=\(client_secret)&v=20191229"
     }
     
     static func getPhotoURL(prefix: String, suffix: String) -> String {

@@ -32,7 +32,7 @@
 		4DBBF6A723B83F29009E0906 /* SightsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBBF6A623B83F29009E0906 /* SightsViewController.swift */; };
 		4DBBF6A923B842A2009E0906 /* SightCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBBF6A823B842A2009E0906 /* SightCell.swift */; };
 		4DBBF6AC23B84395009E0906 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBBF6AB23B84395009E0906 /* UIImageView.swift */; };
-		4DBBF6AF23B844CF009E0906 /* FoursquareRecLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBBF6AE23B844CF009E0906 /* FoursquareRecLoader.swift */; };
+		4DBBF6AF23B844CF009E0906 /* FoursquareLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBBF6AE23B844CF009E0906 /* FoursquareLoader.swift */; };
 		4DBBF6B123B84536009E0906 /* FoursquareURLGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBBF6B023B84536009E0906 /* FoursquareURLGenerator.swift */; };
 		4DBBF6B323B84B13009E0906 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBBF6B223B84B13009E0906 /* ActivityIndicator.swift */; };
 		4DBBF6B523B84C95009E0906 /* AlertGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBBF6B423B84C95009E0906 /* AlertGenerator.swift */; };
@@ -41,6 +41,8 @@
 		4DBBF6BB23B867E9009E0906 /* ItineraryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBBF6BA23B867E9009E0906 /* ItineraryCell.swift */; };
 		4DBBF6BD23B86E0D009E0906 /* ItineraryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBBF6BC23B86E0D009E0906 /* ItineraryDetailViewController.swift */; };
 		4DBBF6BF23B87140009E0906 /* ItineraryMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBBF6BE23B87140009E0906 /* ItineraryMapViewController.swift */; };
+		4DBBF6C123B87682009E0906 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBBF6C023B87682009E0906 /* SearchViewController.swift */; };
+		4DBBF6C323B876BC009E0906 /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBBF6C223B876BC009E0906 /* SearchCell.swift */; };
 		E53256EE7ECEE476032E0825 /* Pods_AnyRec.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60277F781331BA9E8F627F57 /* Pods_AnyRec.framework */; };
 /* End PBXBuildFile section */
 
@@ -72,7 +74,7 @@
 		4DBBF6A623B83F29009E0906 /* SightsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SightsViewController.swift; sourceTree = "<group>"; };
 		4DBBF6A823B842A2009E0906 /* SightCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SightCell.swift; sourceTree = "<group>"; };
 		4DBBF6AB23B84395009E0906 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
-		4DBBF6AE23B844CF009E0906 /* FoursquareRecLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoursquareRecLoader.swift; sourceTree = "<group>"; };
+		4DBBF6AE23B844CF009E0906 /* FoursquareLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoursquareLoader.swift; sourceTree = "<group>"; };
 		4DBBF6B023B84536009E0906 /* FoursquareURLGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoursquareURLGenerator.swift; sourceTree = "<group>"; };
 		4DBBF6B223B84B13009E0906 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		4DBBF6B423B84C95009E0906 /* AlertGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertGenerator.swift; sourceTree = "<group>"; };
@@ -81,6 +83,8 @@
 		4DBBF6BA23B867E9009E0906 /* ItineraryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItineraryCell.swift; sourceTree = "<group>"; };
 		4DBBF6BC23B86E0D009E0906 /* ItineraryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItineraryDetailViewController.swift; sourceTree = "<group>"; };
 		4DBBF6BE23B87140009E0906 /* ItineraryMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItineraryMapViewController.swift; sourceTree = "<group>"; };
+		4DBBF6C023B87682009E0906 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		4DBBF6C223B876BC009E0906 /* SearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
 		60277F781331BA9E8F627F57 /* Pods_AnyRec.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnyRec.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		887C33855907B268EDABFA97 /* Pods-AnyRec.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnyRec.debug.xcconfig"; path = "Target Support Files/Pods-AnyRec/Pods-AnyRec.debug.xcconfig"; sourceTree = "<group>"; };
 		CF1E003F4EE4D381EE7788EC /* Pods-AnyRec.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnyRec.release.xcconfig"; path = "Target Support Files/Pods-AnyRec/Pods-AnyRec.release.xcconfig"; sourceTree = "<group>"; };
@@ -134,6 +138,7 @@
 				4DBBF6B823B866D9009E0906 /* ItineraryViewController.swift */,
 				4DBBF6BC23B86E0D009E0906 /* ItineraryDetailViewController.swift */,
 				4DBBF6BE23B87140009E0906 /* ItineraryMapViewController.swift */,
+				4DBBF6C023B87682009E0906 /* SearchViewController.swift */,
 				4DB37ADB23B738720069D9A4 /* Main.storyboard */,
 				4DB37ADE23B738730069D9A4 /* Assets.xcassets */,
 				4DB37AE023B738730069D9A4 /* LaunchScreen.storyboard */,
@@ -185,6 +190,7 @@
 				4DBBF6A423B7B887009E0906 /* RecommendationCell.swift */,
 				4DBBF6A823B842A2009E0906 /* SightCell.swift */,
 				4DBBF6BA23B867E9009E0906 /* ItineraryCell.swift */,
+				4DBBF6C223B876BC009E0906 /* SearchCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -200,7 +206,7 @@
 		4DBBF6AD23B8448E009E0906 /* Foursquare */ = {
 			isa = PBXGroup;
 			children = (
-				4DBBF6AE23B844CF009E0906 /* FoursquareRecLoader.swift */,
+				4DBBF6AE23B844CF009E0906 /* FoursquareLoader.swift */,
 				4DBBF6B023B84536009E0906 /* FoursquareURLGenerator.swift */,
 			);
 			path = Foursquare;
@@ -358,12 +364,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				4DBBF68A23B7583B009E0906 /* FirestoreDataLoader.swift in Sources */,
+				4DBBF6C323B876BC009E0906 /* SearchCell.swift in Sources */,
 				4DBBF6BD23B86E0D009E0906 /* ItineraryDetailViewController.swift in Sources */,
 				4DBBF69223B7587A009E0906 /* FirestoreQueryFactory.swift in Sources */,
 				4DBBF69F23B75D23009E0906 /* CityCell.swift in Sources */,
 				4DBBF69C23B75AB9009E0906 /* GooglePhotoLoader.swift in Sources */,
 				4DBBF6B323B84B13009E0906 /* ActivityIndicator.swift in Sources */,
 				4DBBF6A523B7B887009E0906 /* RecommendationCell.swift in Sources */,
+				4DBBF6C123B87682009E0906 /* SearchViewController.swift in Sources */,
 				4DBBF6A923B842A2009E0906 /* SightCell.swift in Sources */,
 				4DBBF69723B758AA009E0906 /* City.swift in Sources */,
 				4DBBF68823B7580A009E0906 /* FirestoreData.swift in Sources */,
@@ -380,7 +388,7 @@
 				4DBBF69423B75889009E0906 /* FirestoreDataUpdater.swift in Sources */,
 				4DBBF6AC23B84395009E0906 /* UIImageView.swift in Sources */,
 				4DBBF69023B7586E009E0906 /* DataType.swift in Sources */,
-				4DBBF6AF23B844CF009E0906 /* FoursquareRecLoader.swift in Sources */,
+				4DBBF6AF23B844CF009E0906 /* FoursquareLoader.swift in Sources */,
 				4DBBF69923B758B1009E0906 /* Venue.swift in Sources */,
 				4DBBF68C23B75853009E0906 /* FirestoreDataFactory.swift in Sources */,
 				4DBBF6A323B7B86D009E0906 /* OtherCell.swift in Sources */,
