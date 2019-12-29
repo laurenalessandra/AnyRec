@@ -1,0 +1,80 @@
+//
+//  ItineraryDetailViewController.swift
+//  AnyRec
+//
+//  Created by Lauren Simon on 29.12.19.
+//  Copyright © 2019 Lauren Simon. All rights reserved.
+//
+
+import UIKit
+import MapKit
+import SafariServices
+
+class ItineraryDetailViewController: UIViewController, SFSafariViewControllerDelegate {
+
+    @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var reviewer: UILabel!
+    @IBOutlet weak var review: UITextView!
+    @IBOutlet weak var neighbourhood: UILabel!
+    @IBOutlet weak var address: UILabel!
+    @IBOutlet weak var category: UILabel!
+    @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var cardView: UIView!
+    
+    var venue: Venue!
+    var city: City!
+    let regionDistance: CLLocationDistance = 750
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setUpLabels()
+        setUpMapView()
+    }
+    
+    func setUpMapView() {
+        let coordinates = CLLocationCoordinate2D(latitude: venue.latitude, longitude: venue.longitude)
+        let region = MKCoordinateRegion(center: coordinates, latitudinalMeters: regionDistance, longitudinalMeters: regionDistance)
+        mapView.setRegion(region, animated: true)
+        let annotation = MKPointAnnotation()
+        annotation.coordinate = coordinates
+        annotation.title = venue.name
+        mapView.addAnnotation(annotation)
+        mapView.setCenter(coordinates, animated: true)
+        mapView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+    }
+    
+    override func viewDidLayoutSubviews() {
+        review.setContentOffset(.zero, animated: false)
+    }
+    
+    func setUpLabels() {
+        name.text = venue.name
+        category.text = venue.category
+        neighbourhood.text = venue.neighbourhood
+        address.text = venue.location
+        review.text = venue.review
+        reviewer.text = venue.reviewer
+    }
+
+    @IBAction func directionsPressed(_ sender: UIButton) {
+        let regionDistance: CLLocationDistance = 10000
+        let coordinates = CLLocationCoordinate2DMake(venue.latitude, venue.longitude)
+        let regionSpan = MKCoordinateRegion(center: coordinates, latitudinalMeters: regionDistance, longitudinalMeters: regionDistance)
+        let options = [
+            MKLaunchOptionsMapCenterKey: NSValue(mkCoordinate: regionSpan.center),
+            MKLaunchOptionsMapSpanKey: NSValue(mkCoordinateSpan: regionSpan.span)
+        ]
+        let placemark = MKPlacemark(coordinate: coordinates, addressDictionary: nil)
+        let mapItem = MKMapItem(placemark: placemark)
+        mapItem.name = venue.name
+        mapItem.openInMaps(launchOptions: options)
+    }
+    
+    @IBAction func openFoursquarePressed(_ sender: UIButton) {
+        let venueURL = "http://foursquare.com/v/" + venue.venueID
+        let safariVC = SFSafariViewController(url: NSURL(string: venueURL)! as URL)
+        self.present(safariVC, animated: true, completion: nil)
+        safariVC.delegate = self
+    }
+    
+}

@@ -39,6 +39,7 @@
 		4DBBF6B723B85854009E0906 /* SightDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBBF6B623B85854009E0906 /* SightDetailViewController.swift */; };
 		4DBBF6B923B866D9009E0906 /* ItineraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBBF6B823B866D9009E0906 /* ItineraryViewController.swift */; };
 		4DBBF6BB23B867E9009E0906 /* ItineraryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBBF6BA23B867E9009E0906 /* ItineraryCell.swift */; };
+		4DBBF6BD23B86E0D009E0906 /* ItineraryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBBF6BC23B86E0D009E0906 /* ItineraryDetailViewController.swift */; };
 		E53256EE7ECEE476032E0825 /* Pods_AnyRec.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60277F781331BA9E8F627F57 /* Pods_AnyRec.framework */; };
 /* End PBXBuildFile section */
 
@@ -77,6 +78,7 @@
 		4DBBF6B623B85854009E0906 /* SightDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SightDetailViewController.swift; sourceTree = "<group>"; };
 		4DBBF6B823B866D9009E0906 /* ItineraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItineraryViewController.swift; sourceTree = "<group>"; };
 		4DBBF6BA23B867E9009E0906 /* ItineraryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItineraryCell.swift; sourceTree = "<group>"; };
+		4DBBF6BC23B86E0D009E0906 /* ItineraryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItineraryDetailViewController.swift; sourceTree = "<group>"; };
 		60277F781331BA9E8F627F57 /* Pods_AnyRec.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnyRec.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		887C33855907B268EDABFA97 /* Pods-AnyRec.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnyRec.debug.xcconfig"; path = "Target Support Files/Pods-AnyRec/Pods-AnyRec.debug.xcconfig"; sourceTree = "<group>"; };
 		CF1E003F4EE4D381EE7788EC /* Pods-AnyRec.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnyRec.release.xcconfig"; path = "Target Support Files/Pods-AnyRec/Pods-AnyRec.release.xcconfig"; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 				4DBBF6A623B83F29009E0906 /* SightsViewController.swift */,
 				4DBBF6B623B85854009E0906 /* SightDetailViewController.swift */,
 				4DBBF6B823B866D9009E0906 /* ItineraryViewController.swift */,
+				4DBBF6BC23B86E0D009E0906 /* ItineraryDetailViewController.swift */,
 				4DB37ADB23B738720069D9A4 /* Main.storyboard */,
 				4DB37ADE23B738730069D9A4 /* Assets.xcassets */,
 				4DB37AE023B738730069D9A4 /* LaunchScreen.storyboard */,
@@ -352,6 +355,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4DBBF68A23B7583B009E0906 /* FirestoreDataLoader.swift in Sources */,
+				4DBBF6BD23B86E0D009E0906 /* ItineraryDetailViewController.swift in Sources */,
 				4DBBF69223B7587A009E0906 /* FirestoreQueryFactory.swift in Sources */,
 				4DBBF69F23B75D23009E0906 /* CityCell.swift in Sources */,
 				4DBBF69C23B75AB9009E0906 /* GooglePhotoLoader.swift in Sources */,

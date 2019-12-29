@@ -27,6 +27,23 @@ class ItineraryViewController: UIViewController {
             self.collectionView.reloadData()
         }
     }
+    
+    @IBAction func unwindFromItineraryDetailViewController(segue: UIStoryboardSegue) {
+        let source = segue.source as! ItineraryDetailViewController
+        let dataUpdater = FirestoreDataUpdater(city: city, documentID: source.venue.documentID)
+        
+        dataUpdater.deleteData() { success in
+            success ? print("Delete successful!") : print("Delete unsuccessful.")
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ShowItineraryDetail" {
+            let destination = segue.destination as! ItineraryDetailViewController
+            destination.venue = dataLoader.firestoreData[index] as! Venue
+            destination.city = city
+        }
+    }
 
 }
 extension ItineraryViewController: UICollectionViewDataSource, UICollectionViewDelegate {
