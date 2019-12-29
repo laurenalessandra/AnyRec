@@ -40,7 +40,10 @@ class ItineraryViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ShowItineraryDetail" {
             let destination = segue.destination as! ItineraryDetailViewController
-            destination.venue = dataLoader.firestoreData[index] as! Venue
+            destination.venue = dataLoader.firestoreData[index] as? Venue
+            destination.city = city
+        } else if segue.identifier == "ShowItineraryMap" {
+            let destination = segue.destination as! ItineraryMapViewController
             destination.city = city
         }
     }

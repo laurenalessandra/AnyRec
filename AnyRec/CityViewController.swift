@@ -38,6 +38,9 @@ class CityViewController: UIViewController {
         } else if segue.identifier == "ShowItinerary" {
             let destination = segue.destination as! ItineraryViewController
             destination.city = city
+        } else if segue.identifier == "ShowMap" {
+            let destination = segue.destination as! ItineraryMapViewController
+            destination.city = city
         }
     }
 

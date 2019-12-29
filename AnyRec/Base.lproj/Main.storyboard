@@ -295,12 +295,13 @@
                         <outlet property="othersCollectionView" destination="BwU-4z-8dM" id="6IU-Sc-CXk"/>
                         <outlet property="recCollectionView" destination="wfa-fk-Bmz" id="Gbg-3z-DhI"/>
                         <segue destination="Tp1-WX-G9g" kind="show" identifier="ShowItinerary" id="efk-wF-FJG"/>
+                        <segue destination="wFf-zE-dHd" kind="show" identifier="ShowMap" id="Pq1-eF-YQd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sGK-zK-fNp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="G50-QX-yIj" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2326" y="116"/>
+            <point key="canvasLocation" x="2342" y="114"/>
         </scene>
         <!--Sights View Controller-->
         <scene sceneID="N90-7S-dyJ">
@@ -775,7 +776,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="inH-Q0-N8x"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Ib1-DR-po6"/>
+                    <navigationItem key="navigationItem" id="Ib1-DR-po6">
+                        <barButtonItem key="rightBarButtonItem" title="Itinerary Map" style="done" id="wrk-SJ-wqd">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <segue destination="wFf-zE-dHd" kind="show" identifier="ShowItineraryMap" id="CgN-ti-3fm"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="mNi-g2-Sxi" id="FsA-a5-wIa"/>
                     </connections>
@@ -974,6 +982,36 @@
             </objects>
             <point key="canvasLocation" x="3754" y="810"/>
         </scene>
+        <!--Itinerary Map View Controller-->
+        <scene sceneID="jf7-Z8-3Kj">
+            <objects>
+                <viewController id="wFf-zE-dHd" customClass="ItineraryMapViewController" customModule="AnyRec" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qKR-wO-K37">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="HaU-fS-xkj">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="HaU-fS-xkj" secondAttribute="bottom" id="TN8-jr-evk"/>
+                            <constraint firstItem="HaU-fS-xkj" firstAttribute="top" secondItem="qKR-wO-K37" secondAttribute="top" id="k62-Oa-vzY"/>
+                            <constraint firstItem="HaU-fS-xkj" firstAttribute="trailing" secondItem="ezb-Xm-4Dm" secondAttribute="trailing" id="qvk-Zh-EqZ"/>
+                            <constraint firstItem="HaU-fS-xkj" firstAttribute="leading" secondItem="ezb-Xm-4Dm" secondAttribute="leading" id="viH-L4-DHM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ezb-Xm-4Dm"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="9qY-ZM-M8X"/>
+                    <connections>
+                        <outlet property="mapView" destination="HaU-fS-xkj" id="seH-Er-OJg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0QV-yU-LMl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4476.811594202899" y="809.59821428571422"/>
+        </scene>
     </scenes>
     <resources>
         <image name="address" width="100" height="100"/>
@@ -984,4 +1022,7 @@
         <image name="google-attribution" width="144" height="18"/>
         <image name="user" width="100" height="100"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Pq1-eF-YQd"/>
+    </inferredMetricsTieBreakers>
 </document>
