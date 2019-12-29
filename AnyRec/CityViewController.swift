@@ -13,6 +13,7 @@ class CityViewController: UIViewController {
     @IBOutlet weak var recCollectionView: UICollectionView!
     @IBOutlet weak var othersCollectionView: UICollectionView!
     var city: City!
+    var recIndex: Int!
     
     let others = ["Itinerary", "Itinerary Map", "Search"]
     let recommendations = ["Food", "Drinks", "Desserts", "Fun", "Shopping", "Sights"]
@@ -26,6 +27,14 @@ class CityViewController: UIViewController {
         
         recCollectionView.contentInset = UIEdgeInsets(top: 0, left: 30, bottom: 0, right: 30)
         othersCollectionView.contentInset = UIEdgeInsets(top: 0, left: 30, bottom: 0, right: 30)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ShowSights" {
+            let destination = segue.destination as! SightsViewController
+            destination.city = city
+            destination.intent = recIndex
+        }
     }
 
 }
@@ -51,6 +60,19 @@ extension CityViewController: UICollectionViewDataSource, UICollectionViewDelega
             otherCell.otherImage.image = UIImage(named: others[indexPath.row])
             return otherCell
         }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if collectionView == recCollectionView {
+            recIndex = indexPath.row
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
+        if collectionView == recCollectionView {
+            recIndex = indexPath.row
+        }
+        return true
     }
 
 }

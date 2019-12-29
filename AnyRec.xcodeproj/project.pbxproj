@@ -29,6 +29,13 @@
 		4DBBF6A123B7B80A009E0906 /* CityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBBF6A023B7B80A009E0906 /* CityViewController.swift */; };
 		4DBBF6A323B7B86D009E0906 /* OtherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBBF6A223B7B86D009E0906 /* OtherCell.swift */; };
 		4DBBF6A523B7B887009E0906 /* RecommendationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBBF6A423B7B887009E0906 /* RecommendationCell.swift */; };
+		4DBBF6A723B83F29009E0906 /* SightsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBBF6A623B83F29009E0906 /* SightsViewController.swift */; };
+		4DBBF6A923B842A2009E0906 /* SightCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBBF6A823B842A2009E0906 /* SightCell.swift */; };
+		4DBBF6AC23B84395009E0906 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBBF6AB23B84395009E0906 /* UIImageView.swift */; };
+		4DBBF6AF23B844CF009E0906 /* FoursquareRecLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBBF6AE23B844CF009E0906 /* FoursquareRecLoader.swift */; };
+		4DBBF6B123B84536009E0906 /* FoursquareURLGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBBF6B023B84536009E0906 /* FoursquareURLGenerator.swift */; };
+		4DBBF6B323B84B13009E0906 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBBF6B223B84B13009E0906 /* ActivityIndicator.swift */; };
+		4DBBF6B523B84C95009E0906 /* AlertGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBBF6B423B84C95009E0906 /* AlertGenerator.swift */; };
 		E53256EE7ECEE476032E0825 /* Pods_AnyRec.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60277F781331BA9E8F627F57 /* Pods_AnyRec.framework */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +64,13 @@
 		4DBBF6A023B7B80A009E0906 /* CityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityViewController.swift; sourceTree = "<group>"; };
 		4DBBF6A223B7B86D009E0906 /* OtherCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherCell.swift; sourceTree = "<group>"; };
 		4DBBF6A423B7B887009E0906 /* RecommendationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationCell.swift; sourceTree = "<group>"; };
+		4DBBF6A623B83F29009E0906 /* SightsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SightsViewController.swift; sourceTree = "<group>"; };
+		4DBBF6A823B842A2009E0906 /* SightCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SightCell.swift; sourceTree = "<group>"; };
+		4DBBF6AB23B84395009E0906 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
+		4DBBF6AE23B844CF009E0906 /* FoursquareRecLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoursquareRecLoader.swift; sourceTree = "<group>"; };
+		4DBBF6B023B84536009E0906 /* FoursquareURLGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoursquareURLGenerator.swift; sourceTree = "<group>"; };
+		4DBBF6B223B84B13009E0906 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
+		4DBBF6B423B84C95009E0906 /* AlertGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertGenerator.swift; sourceTree = "<group>"; };
 		60277F781331BA9E8F627F57 /* Pods_AnyRec.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnyRec.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		887C33855907B268EDABFA97 /* Pods-AnyRec.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnyRec.debug.xcconfig"; path = "Target Support Files/Pods-AnyRec/Pods-AnyRec.debug.xcconfig"; sourceTree = "<group>"; };
 		CF1E003F4EE4D381EE7788EC /* Pods-AnyRec.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnyRec.release.xcconfig"; path = "Target Support Files/Pods-AnyRec/Pods-AnyRec.release.xcconfig"; sourceTree = "<group>"; };
@@ -95,6 +109,8 @@
 		4DB37AD423B738720069D9A4 /* AnyRec */ = {
 			isa = PBXGroup;
 			children = (
+				4DBBF6AD23B8448E009E0906 /* Foursquare */,
+				4DBBF6AA23B84385009E0906 /* Extensions */,
 				4DBBF69D23B75D18009E0906 /* Views */,
 				4DBBF69A23B75AAA009E0906 /* Google */,
 				4DBBF69523B758A1009E0906 /* Model */,
@@ -103,12 +119,15 @@
 				4DB37AD723B738720069D9A4 /* SceneDelegate.swift */,
 				4DB37AD923B738720069D9A4 /* ViewController.swift */,
 				4DBBF6A023B7B80A009E0906 /* CityViewController.swift */,
+				4DBBF6A623B83F29009E0906 /* SightsViewController.swift */,
 				4DB37ADB23B738720069D9A4 /* Main.storyboard */,
 				4DB37ADE23B738730069D9A4 /* Assets.xcassets */,
 				4DB37AE023B738730069D9A4 /* LaunchScreen.storyboard */,
 				4DB37AE323B738730069D9A4 /* Info.plist */,
 				4DBBF68223B74A64009E0906 /* GreetingSimulator.swift */,
 				4DBBF68423B74EB8009E0906 /* GoogleService-Info.plist */,
+				4DBBF6B223B84B13009E0906 /* ActivityIndicator.swift */,
+				4DBBF6B423B84C95009E0906 /* AlertGenerator.swift */,
 			);
 			path = AnyRec;
 			sourceTree = "<group>";
@@ -150,8 +169,26 @@
 				4DBBF69E23B75D23009E0906 /* CityCell.swift */,
 				4DBBF6A223B7B86D009E0906 /* OtherCell.swift */,
 				4DBBF6A423B7B887009E0906 /* RecommendationCell.swift */,
+				4DBBF6A823B842A2009E0906 /* SightCell.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		4DBBF6AA23B84385009E0906 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4DBBF6AB23B84395009E0906 /* UIImageView.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		4DBBF6AD23B8448E009E0906 /* Foursquare */ = {
+			isa = PBXGroup;
+			children = (
+				4DBBF6AE23B844CF009E0906 /* FoursquareRecLoader.swift */,
+				4DBBF6B023B84536009E0906 /* FoursquareURLGenerator.swift */,
+			);
+			path = Foursquare;
 			sourceTree = "<group>";
 		};
 		818C2447BC6F200A5AFDB693 /* Frameworks */ = {
@@ -309,20 +346,27 @@
 				4DBBF69223B7587A009E0906 /* FirestoreQueryFactory.swift in Sources */,
 				4DBBF69F23B75D23009E0906 /* CityCell.swift in Sources */,
 				4DBBF69C23B75AB9009E0906 /* GooglePhotoLoader.swift in Sources */,
+				4DBBF6B323B84B13009E0906 /* ActivityIndicator.swift in Sources */,
 				4DBBF6A523B7B887009E0906 /* RecommendationCell.swift in Sources */,
+				4DBBF6A923B842A2009E0906 /* SightCell.swift in Sources */,
 				4DBBF69723B758AA009E0906 /* City.swift in Sources */,
 				4DBBF68823B7580A009E0906 /* FirestoreData.swift in Sources */,
 				4DB37ADA23B738720069D9A4 /* ViewController.swift in Sources */,
+				4DBBF6A723B83F29009E0906 /* SightsViewController.swift in Sources */,
 				4DB37AD623B738720069D9A4 /* AppDelegate.swift in Sources */,
 				4DBBF68E23B75861009E0906 /* DataLoader.swift in Sources */,
 				4DB37AD823B738720069D9A4 /* SceneDelegate.swift in Sources */,
 				4DBBF68323B74A64009E0906 /* GreetingSimulator.swift in Sources */,
 				4DBBF6A123B7B80A009E0906 /* CityViewController.swift in Sources */,
+				4DBBF6B123B84536009E0906 /* FoursquareURLGenerator.swift in Sources */,
 				4DBBF69423B75889009E0906 /* FirestoreDataUpdater.swift in Sources */,
+				4DBBF6AC23B84395009E0906 /* UIImageView.swift in Sources */,
 				4DBBF69023B7586E009E0906 /* DataType.swift in Sources */,
+				4DBBF6AF23B844CF009E0906 /* FoursquareRecLoader.swift in Sources */,
 				4DBBF69923B758B1009E0906 /* Venue.swift in Sources */,
 				4DBBF68C23B75853009E0906 /* FirestoreDataFactory.swift in Sources */,
 				4DBBF6A323B7B86D009E0906 /* OtherCell.swift in Sources */,
+				4DBBF6B523B84C95009E0906 /* AlertGenerator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
