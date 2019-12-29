@@ -36,6 +36,7 @@
 		4DBBF6B123B84536009E0906 /* FoursquareURLGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBBF6B023B84536009E0906 /* FoursquareURLGenerator.swift */; };
 		4DBBF6B323B84B13009E0906 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBBF6B223B84B13009E0906 /* ActivityIndicator.swift */; };
 		4DBBF6B523B84C95009E0906 /* AlertGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBBF6B423B84C95009E0906 /* AlertGenerator.swift */; };
+		4DBBF6B723B85854009E0906 /* SightDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBBF6B623B85854009E0906 /* SightDetailViewController.swift */; };
 		E53256EE7ECEE476032E0825 /* Pods_AnyRec.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60277F781331BA9E8F627F57 /* Pods_AnyRec.framework */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +72,7 @@
 		4DBBF6B023B84536009E0906 /* FoursquareURLGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoursquareURLGenerator.swift; sourceTree = "<group>"; };
 		4DBBF6B223B84B13009E0906 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		4DBBF6B423B84C95009E0906 /* AlertGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertGenerator.swift; sourceTree = "<group>"; };
+		4DBBF6B623B85854009E0906 /* SightDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SightDetailViewController.swift; sourceTree = "<group>"; };
 		60277F781331BA9E8F627F57 /* Pods_AnyRec.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnyRec.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		887C33855907B268EDABFA97 /* Pods-AnyRec.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnyRec.debug.xcconfig"; path = "Target Support Files/Pods-AnyRec/Pods-AnyRec.debug.xcconfig"; sourceTree = "<group>"; };
 		CF1E003F4EE4D381EE7788EC /* Pods-AnyRec.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnyRec.release.xcconfig"; path = "Target Support Files/Pods-AnyRec/Pods-AnyRec.release.xcconfig"; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 				4DBBF68423B74EB8009E0906 /* GoogleService-Info.plist */,
 				4DBBF6B223B84B13009E0906 /* ActivityIndicator.swift */,
 				4DBBF6B423B84C95009E0906 /* AlertGenerator.swift */,
+				4DBBF6B623B85854009E0906 /* SightDetailViewController.swift */,
 			);
 			path = AnyRec;
 			sourceTree = "<group>";
@@ -367,6 +370,7 @@
 				4DBBF68C23B75853009E0906 /* FirestoreDataFactory.swift in Sources */,
 				4DBBF6A323B7B86D009E0906 /* OtherCell.swift in Sources */,
 				4DBBF6B523B84C95009E0906 /* AlertGenerator.swift in Sources */,
+				4DBBF6B723B85854009E0906 /* SightDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
