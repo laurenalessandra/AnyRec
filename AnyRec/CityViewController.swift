@@ -16,6 +16,7 @@ class CityViewController: UIViewController {
     var recIndex: Int!
     
     let others = ["Itinerary", "Itinerary Map", "Search"]
+    let othersSegues = ["ShowItinerary", "ShowMap", "SearchVenues"]
     let recommendations = ["Food", "Drinks", "Desserts", "Fun", "Shopping", "Sights"]
     
     override func viewDidLoad() {
@@ -34,6 +35,9 @@ class CityViewController: UIViewController {
             let destination = segue.destination as! SightsViewController
             destination.city = city
             destination.intent = recIndex
+        } else if segue.identifier == "ShowItinerary" {
+            let destination = segue.destination as! ItineraryViewController
+            destination.city = city
         }
     }
 
@@ -65,6 +69,8 @@ extension CityViewController: UICollectionViewDataSource, UICollectionViewDelega
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if collectionView == recCollectionView {
             recIndex = indexPath.row
+        } else {
+            performSegue(withIdentifier: othersSegues[indexPath.row], sender: nil)
         }
     }
     
