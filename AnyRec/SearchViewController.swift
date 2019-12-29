@@ -41,6 +41,14 @@ class SearchViewController: UIViewController, UISearchBarDelegate {
             }
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ShowSearchDetail" {
+            let destination = segue.destination as! SightDetailViewController
+            destination.venue = searchLoader.venues[index]
+            destination.city = city
+        }
+    }
 
 }
 extension SearchViewController: UICollectionViewDataSource, UICollectionViewDelegate {

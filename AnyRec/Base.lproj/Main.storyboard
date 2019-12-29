@@ -640,6 +640,7 @@
                         <outlet property="neighbourhood" destination="Ny8-RO-hN6" id="fRZ-gf-uuV"/>
                         <outlet property="review" destination="UxN-A2-4Ny" id="1mi-kh-aIh"/>
                         <outlet property="reviewer" destination="4b4-zX-Fhz" id="FU5-EL-DqD"/>
+                        <outlet property="reviewerIcon" destination="Nv1-ef-FPM" id="KOM-OQ-GsT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wVc-vS-iqx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -992,6 +993,7 @@
                         <outlet property="neighbourhood" destination="Cyu-Vf-UuF" id="dqv-Nv-sBj"/>
                         <outlet property="review" destination="P0u-W2-sNT" id="wjo-qc-mFZ"/>
                         <outlet property="reviewer" destination="07L-88-YsW" id="ERk-L8-Gmw"/>
+                        <outlet property="reviewerIcon" destination="duj-nK-y8G" id="nTo-8S-XuW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tv2-W8-wEV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1130,6 +1132,7 @@
                                             <outlet property="searchCategory" destination="uWF-hF-3Av" id="rfb-hC-omR"/>
                                             <outlet property="searchImage" destination="GRh-pj-SrU" id="hVG-YY-2Yr"/>
                                             <outlet property="searchName" destination="XJ6-18-c7R" id="8b1-Yb-3RL"/>
+                                            <segue destination="LNo-Ya-We1" kind="show" identifier="ShowSearchDetail" id="vqX-fo-ibn"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -1186,5 +1189,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="CgN-ti-3fm"/>
+        <segue reference="vqX-fo-ibn"/>
     </inferredMetricsTieBreakers>
 </document>

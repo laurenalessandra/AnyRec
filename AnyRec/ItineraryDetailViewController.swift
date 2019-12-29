@@ -20,6 +20,7 @@ class ItineraryDetailViewController: UIViewController, SFSafariViewControllerDel
     @IBOutlet weak var category: UILabel!
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var cardView: UIView!
+    @IBOutlet weak var reviewerIcon: UIImageView!
     
     var venue: Venue!
     var city: City!
@@ -54,6 +55,10 @@ class ItineraryDetailViewController: UIViewController, SFSafariViewControllerDel
         address.text = venue.location
         review.text = venue.review
         reviewer.text = venue.reviewer
+        
+        if venue.review == "" && venue.reviewer == "" {
+            reviewerIcon.isHidden = true
+        }
     }
 
     @IBAction func directionsPressed(_ sender: UIButton) {
