@@ -95,12 +95,9 @@ extension SightsViewController: UICollectionViewDataSource, UICollectionViewDele
         if let photoURL = URL(string: url) {
             sightCell.sightImage.downloadImageToCache(url: photoURL, imageCache: imageCache)
         }
-        
-        sightCell.sightImage.layer.masksToBounds = true
         sightCell.sightName.text = recLoader.venues[indexPath.row].name
         sightCell.sightAddress.text = recLoader.venues[indexPath.row].location
         sightCell.sightCategory.text = recLoader.venues[indexPath.row].category
-        sightCell.layer.cornerRadius = 7
         return sightCell
     }
     

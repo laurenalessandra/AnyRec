@@ -31,19 +31,22 @@ class CityViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "ShowSights" {
+        switch segue.identifier {
+        case "ShowSights":
             let destination = segue.destination as! SightsViewController
             destination.city = city
             destination.intent = recIndex
-        } else if segue.identifier == "ShowItinerary" {
+        case "ShowItinerary":
             let destination = segue.destination as! ItineraryViewController
             destination.city = city
-        } else if segue.identifier == "ShowMap" {
+        case "ShowMap":
             let destination = segue.destination as! ItineraryMapViewController
             destination.city = city
-        } else if segue.identifier == "ShowSearch" {
+        case "ShowSearch":
             let destination = segue.destination as! SearchViewController
             destination.city = city
+        default:
+            return
         }
     }
 
@@ -58,15 +61,12 @@ extension CityViewController: UICollectionViewDataSource, UICollectionViewDelega
             let recommendationCell = collectionView.dequeueReusableCell(withReuseIdentifier: "RecommendationCell", for: indexPath) as! RecommendationCell
             recommendationCell.recName.setTitle("   \(recommendations[indexPath.row])", for: .normal)
             recommendationCell.recName.contentHorizontalAlignment = .left
-            recommendationCell.layer.cornerRadius = 10
             recommendationCell.recImage.image = UIImage(named: recommendations[indexPath.row])
             return recommendationCell
         } else {
             let otherCell = collectionView.dequeueReusableCell(withReuseIdentifier: "OtherCell", for: indexPath) as! OtherCell
             otherCell.otherName.setTitle("  \(others[indexPath.row])", for: .normal)
             otherCell.otherName.contentHorizontalAlignment = .left
-            otherCell.layer.cornerRadius = 7
-            otherCell.layer.masksToBounds = true
             otherCell.otherImage.image = UIImage(named: others[indexPath.row])
             return otherCell
         }

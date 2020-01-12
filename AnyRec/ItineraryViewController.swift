@@ -58,11 +58,8 @@ extension ItineraryViewController: UICollectionViewDataSource, UICollectionViewD
         let itineraryCell = collectionView.dequeueReusableCell(withReuseIdentifier: "ItineraryCell", for: indexPath) as! ItineraryCell
         let venue = dataLoader.firestoreData[indexPath.row] as! Venue
         var url: String
-        if venue.iconURLSuffix == ".png" {
-            url = "\(venue.iconURLPrefix)88\(venue.iconURLSuffix)"
-        } else {
-            url = "\(venue.iconURLPrefix)300x500\(venue.iconURLSuffix)"
-        }
+        
+        url = venue.iconURLSuffix == ".png" ? "\(venue.iconURLPrefix)88\(venue.iconURLSuffix)" : "\(venue.iconURLPrefix)300x500\(venue.iconURLSuffix)"
         
         itineraryCell.itineraryImage.image = UIImage(named: "empty-card")
         let photoURL = NSURL(string: url)
@@ -74,8 +71,6 @@ extension ItineraryViewController: UICollectionViewDataSource, UICollectionViewD
         itineraryCell.itineraryAddress.text = venue.location
         itineraryCell.itineraryCategory.text = venue.category
         
-        itineraryCell.layer.cornerRadius = 7
-        itineraryCell.layer.masksToBounds = true
         return itineraryCell
     }
     

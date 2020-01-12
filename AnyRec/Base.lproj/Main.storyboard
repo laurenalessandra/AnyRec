@@ -196,6 +196,11 @@
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="192" height="269"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <outlet property="recImage" destination="tRo-so-BWL" id="AyB-Z9-aeF"/>
                                             <outlet property="recName" destination="1Yx-BS-VxL" id="nIN-9R-Tre"/>
@@ -254,6 +259,11 @@
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="148" height="118"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="7"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <outlet property="otherImage" destination="Lo1-PP-qhx" id="O02-aM-3kF"/>
                                             <outlet property="otherName" destination="34g-pZ-joR" id="x7G-kK-F5j"/>
@@ -341,6 +351,9 @@
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="jsN-1I-zdX" secondAttribute="height" multiplier="1:1" id="kNd-0A-sfR"/>
                                                     </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                    </userDefinedRuntimeAttributes>
                                                 </imageView>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="category" translatesAutoresizingMaskIntoConstraints="NO" id="0ME-0U-adj">
                                                     <rect key="frame" x="106" y="32" width="30" height="24"/>
@@ -409,6 +422,11 @@
                                         </collectionViewCellContentView>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <size key="customSize" width="334" height="93"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="7"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <outlet property="sightAddress" destination="jqb-h7-MPS" id="Lfn-5h-h8I"/>
                                             <outlet property="sightCategory" destination="dQf-F7-bKX" id="VT2-cK-nOA"/>
@@ -794,6 +812,11 @@
                                         </collectionViewCellContentView>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <size key="customSize" width="334" height="93"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="7"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <outlet property="itineraryAddress" destination="EzI-e6-Jj1" id="Hp0-mm-bY1"/>
                                             <outlet property="itineraryCategory" destination="wgl-rM-ewf" id="EeW-w0-3lH"/>
